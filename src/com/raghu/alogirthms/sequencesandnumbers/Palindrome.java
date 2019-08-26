@@ -10,14 +10,24 @@ public class Palindrome {
     public static void main(String[] args){
 
         System.out.println("Please Enter a number : ");
-        int palindrome = new Scanner(System.in).nextInt();
+        String input = new Scanner(System.in).next();
+        boolean isPalindrome;
 
-        if(isPalindrome(palindrome)){
-            System.out.println("Number : " + palindrome + " is a palindrome");
-        }else{
-            System.out.println("Number : " + palindrome + " is not a palindrome");
+        try{
+            int intPalindrome = Integer.parseInt(input);
+            isPalindrome = isPalindrome(intPalindrome);
+        }
+        catch (NumberFormatException nfe){
+            //Input is not a number. So assuming it be a string
+            isPalindrome = isPalindrome(input);
         }
 
+        if(isPalindrome){
+            System.out.println(input + " is a palindrome");
+        }
+        else{
+            System.out.println(input + " is not a palindrome");
+        }
     }
 
     /*
@@ -27,12 +37,26 @@ public class Palindrome {
         int palindrome = number;
         int reverse = 0;
 
-        while (palindrome != 0) {
+        while (palindrome > 0) {
             int remainder = palindrome % 10;
             reverse = reverse * 10 + remainder;
             palindrome = palindrome / 10;
         }
 
         return number == reverse;
+    }
+
+    /*
+     * @returns true if the given string is a palindrome. Otherwise returns false.
+     */
+    private static boolean isPalindrome(final String input) {
+        char[] chars = input.toCharArray();
+        int len = chars.length;
+        for(int i = 0; i < len/2; i++){
+            if(chars[i] != chars[(len - 1) - i]){
+                return false;
+            }
+        }
+        return true;
     }
 }
