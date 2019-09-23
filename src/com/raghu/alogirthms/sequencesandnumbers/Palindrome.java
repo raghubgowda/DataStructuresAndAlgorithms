@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Palindrome {
     public static void main(String[] args){
 
-        System.out.println("Please Enter a number : ");
+        System.out.println("Please enter a string or a number: ");
         String input = new Scanner(System.in).next();
         boolean isPalindrome;
 
@@ -19,14 +19,14 @@ public class Palindrome {
         }
         catch (NumberFormatException nfe){
             //Input is not a number. So assuming it be a string
-            isPalindrome = isPalindrome(input);
+            isPalindrome = isPalindrome(input.toUpperCase());
         }
 
         if(isPalindrome){
-            System.out.println(input + " is a palindrome");
+            System.out.println("'"+input+"'" + " is a palindrome");
         }
         else{
-            System.out.println(input + " is not a palindrome");
+            System.out.println("'"+input+"'" + " is not a palindrome");
         }
     }
 
@@ -50,6 +50,10 @@ public class Palindrome {
      * @returns true if the given string is a palindrome. Otherwise returns false.
      */
     private static boolean isPalindrome(final String input) {
+        if(input == null || input.length() < 2) {
+            return true;
+        }
+
         char[] chars = input.toCharArray();
         int len = chars.length;
         for(int i = 0; i < len/2; i++){
