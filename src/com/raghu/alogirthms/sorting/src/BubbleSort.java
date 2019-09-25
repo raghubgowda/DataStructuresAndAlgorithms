@@ -1,9 +1,10 @@
-package com.raghu.alogirthms.sorting;
+package com.raghu.alogirthms.sorting.src;
 
-import java.util.Arrays;
+import com.raghu.util.ArrayUtils;
+import static java.lang.System.out;
 
 public class BubbleSort {
-    static void sort(int[] input, int n) {
+    public static void sort(int[] input, int n) {
         if (n == 1) {
             return;
         }
@@ -19,13 +20,13 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] input = {23, 45, 11, 20, 7, 65, 2};
-        System.out.print("Input : ");
-        System.out.println(Arrays.toString(input));
+        int[] input = ArrayUtils.getRandomArray(6, 20);
+        out.println("Input: ");
+        ArrayUtils.print(input);
 
+        out.println("Output: ");
         sort(input, input.length);
+        ArrayUtils.print(input);
 
-        System.out.print("Sorted array : ");
-        System.out.println(Arrays.toString(input));
     }
 }
