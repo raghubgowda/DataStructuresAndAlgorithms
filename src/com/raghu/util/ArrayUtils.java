@@ -1,7 +1,6 @@
 package com.raghu.util;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 public class ArrayUtils {
 
@@ -10,11 +9,12 @@ public class ArrayUtils {
     }
 
     public static int[] getRandomArray(final int size, final int max){
-        int[] numbers = new int[size];
+        Set<Integer> uniques = new LinkedHashSet<>(size);
         Random generator = new Random();
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = generator.nextInt(max);
+        for (int i = 0; i < size; i++) {
+            uniques.add(generator.nextInt(max) + 1);
         }
-        return numbers;
+
+        return uniques.stream().mapToInt(i->i).toArray();
     }
 }
