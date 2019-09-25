@@ -2,6 +2,7 @@ package com.raghu.alogirthms.sorting.test;
 
 import com.raghu.alogirthms.sorting.src.BubbleSort;
 import com.raghu.alogirthms.sorting.src.InsertionSort;
+import com.raghu.alogirthms.sorting.src.MergeSort;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,6 +21,12 @@ public class SortingTest {
     @Test
     public void testInsertionSort() {
         InsertionSort.sort(actual, actual.length);
+        Assert.assertArrayEquals(actual, expected);
+    }
+
+    @Test
+    public void testMergeSort() {
+        MergeSort.sort(actual, actual.length);
         Assert.assertArrayEquals(actual, expected);
     }
 }
