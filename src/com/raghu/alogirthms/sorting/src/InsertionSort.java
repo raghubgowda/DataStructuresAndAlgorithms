@@ -24,10 +24,10 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         int[] input = ArrayUtils.getRandomArray(8, 25);
-        out.println("Given: ");
+        out.print("Given: ");
         ArrayUtils.print(input);
 
-        out.println("Output: ");
+        out.print("Output: ");
         sort(input, input.length);
         ArrayUtils.print(input);
 

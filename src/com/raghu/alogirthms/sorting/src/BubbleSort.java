@@ -21,10 +21,10 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] input = ArrayUtils.getRandomArray(6, 20);
-        out.println("Input: ");
+        out.print("Input: ");
         ArrayUtils.print(input);
 
-        out.println("Output: ");
+        out.print("Output: ");
         sort(input, input.length);
         ArrayUtils.print(input);
 
