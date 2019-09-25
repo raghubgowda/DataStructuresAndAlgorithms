@@ -3,7 +3,7 @@ package com.raghu.alogirthms.sorting;
 import java.util.Arrays;
 
 public class BubbleSort {
-    private static void bubbleSort(int[] input, int n) {
+    static void sort(int[] input, int n) {
         if (n == 1) {
             return;
         }
@@ -15,7 +15,7 @@ public class BubbleSort {
                 input[i + 1] = temp;
             }
         }
-        bubbleSort(input, n - 1);
+        sort(input, n - 1);
     }
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class BubbleSort {
         System.out.print("Input : ");
         System.out.println(Arrays.toString(input));
 
-        bubbleSort(input, input.length);
+        sort(input, input.length);
 
         System.out.print("Sorted array : ");
         System.out.println(Arrays.toString(input));
