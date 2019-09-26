@@ -1,8 +1,5 @@
-package com.raghu.alogirthms.sorting.test;
+package com.raghu.alogirthms.sorting;
 
-import com.raghu.alogirthms.sorting.src.BubbleSort;
-import com.raghu.alogirthms.sorting.src.InsertionSort;
-import com.raghu.alogirthms.sorting.src.MergeSort;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.raghu.alogirthms.sorting.src;
+package com.raghu.alogirthms.sorting;
 
 import com.raghu.util.ArrayUtils;
 
@@ -6,7 +6,7 @@ import static java.lang.System.*;
 import static java.lang.System.out;
 
 public class MergeSort {
-    public static void sort(int[] a, int n) {
+     static void sort(int[] a, int n) {
         if (n < 2)
             return;
         int mid = n / 2;

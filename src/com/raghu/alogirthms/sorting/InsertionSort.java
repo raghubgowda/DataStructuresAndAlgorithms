@@ -1,11 +1,11 @@
-package com.raghu.alogirthms.sorting.src;
+package com.raghu.alogirthms.sorting;
 
 import com.raghu.util.ArrayUtils;
 
 import static java.lang.System.out;
 
 public class InsertionSort {
-    public static void sort(int[] input, int n) {
+     static void sort(int[] input, int n) {
         if (n <= 1) {
             return;
         }
