@@ -32,4 +32,10 @@ public class SortingTest {
         SelectionSort.sort(actual);
         Assert.assertArrayEquals(actual, expected);
     }
+
+    @Test
+    public void testShellSort(){
+        ShellSort.sort(actual);
+        Assert.assertArrayEquals(actual, expected);
+    }
 }
