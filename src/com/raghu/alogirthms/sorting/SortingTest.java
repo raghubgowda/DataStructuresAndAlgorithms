@@ -26,4 +26,10 @@ public class SortingTest {
         MergeSort.sort(actual, actual.length);
         Assert.assertArrayEquals(actual, expected);
     }
+
+    @Test
+    public void testSelectionSort(){
+        SelectionSort.sort(actual);
+        Assert.assertArrayEquals(actual, expected);
+    }
 }
